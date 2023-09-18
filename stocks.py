@@ -25,7 +25,7 @@ def stock_purchases():
     if stock_name == "amazon":
         shares = invest_amount / amazon
     elif stock_name == "apple":
-       shares = invest_amount / apple
+      print(shares = invest_amount / apple)
     elif stock_name == "fb":
        shares = invest_amount / fb
     elif stock_name == "google":
