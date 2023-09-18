@@ -20,18 +20,18 @@ def stock_purchases():
     print(apple)
     # Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    shares = 1
+    shares = 0
 
     if stock_name == "amazon":
-        shares = invest_amount / 3000
+        shares = invest_amount / amazon
     elif stock_name == "apple":
-       shares = invest_amount / 100
+       shares = invest_amount / apple
     elif stock_name == "fb":
-       shares = invest_amount / 250
+       shares = invest_amount / fb
     elif stock_name == "google":
-       shares = invest_amount / 1400
+       shares = invest_amount / google
     elif stock_name == "msft":
-        shares = invest_amount / 200
+        shares = invest_amount / msft
     else:
         print("invalid stock name entered")
     print(f"{name} has ${invest_amount} to invest and can buy {shares} shares of Apple at the current price of ${apple}. ")    
