@@ -16,7 +16,7 @@ def stock_purchases():
     print(invest_amount)
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
     # NOTE: Take a look at how this input string prints out
-    stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ")
+    stock_name = input("\nWhich stock are you interested in? Enter the full name:\namazon\napple\nfb\ngoogle\nmsft\nStock Name: ")
     print("user input",stock_name)
     # Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
