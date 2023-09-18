@@ -17,21 +17,25 @@ def stock_purchases():
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
     # NOTE: Take a look at how this input string prints out
     stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ")
-    int(stock_name)
-    print(stock_name)
+
     # Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
     shares = invest_amount / stock_name
     if stock_name == "amazon":
         shares = invest_amount / amazon
+        print(amazon)
     elif stock_name == "apple":
        shares = invest_amount / apple 
+       print(apple)
     elif stock_name == "fb":
        shares = invest_amount / fb  
+       print(fb)
     elif stock_name == "google":
        shares = invest_amount / google
+       print(google)
     elif stock_name == "msft":
         shares = invest_amount / msft 
+        print(msft)
     else:
         print("invalid stock name entered")
     print(f"{name} has ${invest_amount} to invest and can buy {shares} shares of Apple at the current price of ${apple}. ")    
