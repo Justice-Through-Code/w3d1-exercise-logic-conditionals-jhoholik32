@@ -20,7 +20,8 @@ def stock_purchases():
     
     # Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    share = int(1*(stock_name))
+    share = 0
+    share = 1
     if stock_name == "amazon":
         shares = invest_amount / amazon
         stock = amazon
