@@ -23,15 +23,15 @@ def stock_purchases():
     shares = 0
 
     if stock_name == "amazon":
-        shares = invest_amount / amazon
+        shares = invest_amount / 3000
     elif stock_name == "apple":
-       shares = invest_amount / apple 
+       shares = invest_amount / 100
     elif stock_name == "fb":
-       shares = invest_amount / fb  
+       shares = invest_amount / 250
     elif stock_name == "google":
-       shares = invest_amount / google
+       shares = invest_amount / 1400
     elif stock_name == "msft":
-        shares = invest_amount / msft 
+        shares = invest_amount / 200
     else:
         print("invalid stock name entered")
     print(f"{name} has ${invest_amount} to invest and can buy {shares} shares of Apple at the current price of ${apple}. ")    
