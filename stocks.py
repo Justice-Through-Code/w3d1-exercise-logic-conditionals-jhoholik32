@@ -12,30 +12,35 @@ def stock_purchases():
     # 1.2 TODO: Ask the client how many dollars they would like to invest (use the string: "How much would you like to invest? $")
     # and save it into a variable
     # NOTE: When you use the `input` function to get user input, what do numbers get saved as?
-    invest_amount = int(input("How much would you like to invest? $"))
-    print(invest_amount)
+    invest_amount = input("How much would you like to invest? $")
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
     # NOTE: Take a look at how this input string prints out
-    stock_name = input("\nWhich stock are you interested in? Enter the full name:\namazon\napple\nfb\ngoogle\nmsft\nStock Name: ")
+    stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ")
     
-    # Use `if/elif/else` conditional logic to determine how much stock the client can buy,
+    # Now that you have all of the client info, you can check how much they can purchase of the stock
+    # they're interested in.
+
+    # 1.4 TODO: Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
-    
-    if stock_name == "amazon":
-        shares = (invest_amount / amazon)
-    elif stock_name == "apple":
-      shares=( invest_amount / apple)
-    elif stock_name == "fb":
-       shares = (invest_amount / fb)
-    elif stock_name == "google":
-       shares = (invest_amount / google)
-    elif stock_name == "msft":
-        shares = (invest_amount / msft)
-    else:
-        print("invalid stock name entered")
-    shares = int(shares)
-    print(f"{name} has ${invest_amount} to invest and can buy {shares} shares of Apple at the current price of ${apple}. ")    
+    shares = 0
+    if stock_name == "Amazon":
+        shares = invest_amount // amazon
+        stock_price = amazon
+    elif stock_name == "Apple":
+        shares = invest_amount // apple
+        stock_price = apple
+    elif stock_name == "Facebook":
+        shares = invest_amount // fb
+        stock_price = fb
+    elif stock_name == "Google":
+        shares = invest_amount // google
+        stock_price = google
+    elif stock_name == "Microsoft":
+        shares = invest_amount // msft
+        stock_price = msft
+
+    "
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
-stock_purchases()
+    print(f"{name}has{invest_amount}to invest and can buy {int(shares)}of {stock_name}  at the current price of ${stock_price}. ")
